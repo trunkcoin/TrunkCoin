@@ -1,0 +1,26 @@
+# /etc/conf.d/trunkd: config file for /etc/init.d/trunkd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/trunk/trunk.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/trunkd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/trunkd.pid"
+
+# Where to write trunkd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/trunkd"
+
+# User and group to own trunkd process
+#BITCOIND_USER="trunk"
+#BITCOIND_GROUP="trunk"
+
+# Path to trunkd executable
+#BITCOIND_BIN="/usr/bin/trunkd"
+
+# Nice value to run trunkd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

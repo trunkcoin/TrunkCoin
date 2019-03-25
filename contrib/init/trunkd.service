@@ -1,0 +1,26 @@
+[Unit]
+Description=Trunk's distributed currency daemon
+After=network.target
+
+[Service]
+User=trunk
+Group=trunk
+
+Type=forking
+PIDFile=/var/lib/trunkd/trunkd.pid
+
+ExecStart=/usr/bin/trunkd -daemon -pid=/var/lib/trunkd/trunkd.pid \
+          -conf=/etc/trunk/trunk.conf -datadir=/var/lib/trunkd
+
+ExecStop=-/usr/bin/trunk-cli -conf=/etc/trunk/trunk.conf \
+         -datadir=/var/lib/trunkd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Trunk
+Comment=Trunk P2P Cryptocurrency
+Comment[fr]=Trunk, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Trunk, eşten eşe kriptografik sanal para birimi
+Exec=trunk-qt %u
+Terminal=false
+Type=Application
+Icon=trunk128
+MimeType=x-scheme-handler/trunk;
+Categories=Office;Finance;
